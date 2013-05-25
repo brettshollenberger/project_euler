@@ -9,8 +9,7 @@
 # numbers is in compliance with British usage.
 
 class Verbalizer
-  attr_accessor :one_to_nine, :ten_to_nineteen, :twenty, :thirty, :forty, :fifty, :sixty,
-  :seventy, :eighty, :ninety, :hundred, :thousand, :words, :strings, :and
+  attr_accessor :one_to_nine, :ten_to_nineteen, :twenties_to_nineties, :hundred, :thousand, :words, :strings, :and
 
 #============================================================================================================#
 #========================================== Map Numbers to Words ============================================#
@@ -20,15 +19,8 @@ class Verbalizer
     @one_to_nine = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     @ten_to_nineteen = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
       'seventeen', 'eighteen', 'nineteen']
-    @twenty = 'twenty'
-    @thirty = 'thirty'
-    @forty = 'forty'
-    @fifty = 'fifty'
-    @sixty = 'sixty'
-    @seventy = 'seventy'
-    @eighty = 'eighty'
-    @ninety = 'ninety'
-    @twenties_to_nineties = ['', '', @twenty, @thirty, @forty, @fifty, @sixty, @seventy, @eighty, @ninety]
+    @twenties_to_nineties = ['', '', "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+      "eighty", "ninety"]
     @hundred = 'hundred'
     @thousand = 'thousand'
     @and = 'and'
