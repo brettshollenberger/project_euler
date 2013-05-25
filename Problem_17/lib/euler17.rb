@@ -19,7 +19,7 @@ class Verbalizer
   def initialize
     @one_to_nine = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     @ten_to_nineteen = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
-      'seventeen', 'eighteen', 'nineteen', 'twenty']
+      'seventeen', 'eighteen', 'nineteen']
     @twenty = 'twenty'
     @thirty = 'thirty'
     @forty = 'forty'
