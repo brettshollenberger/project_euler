@@ -12,9 +12,11 @@ require 'rspec'
 require_relative '../lib/euler17'
 
 describe 'Verbalizer' do
+
   before(:each) do
     @verbalizer = Verbalizer.new
   end
+
   context "it stringifies" do
     it "returns string versions of numbers" do
       @stringify = @verbalizer.stringify(1..2)
