@@ -12,8 +12,8 @@ describe Permutator do
     @permutator = Permutator.new
   end
 
-  it "can calculate the millionth permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9" do
-    expect(@permutator.millionth_permutation).to eql([2,7,8,3,9,1,5,4,6,0])
+  it "can calculate the nth permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9" do
+    expect(@permutator.nth_permutation(1000000, "0123456789")).to eql(2783915460)
   end
 
 end
