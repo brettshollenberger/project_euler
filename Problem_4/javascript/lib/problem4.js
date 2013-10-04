@@ -14,5 +14,4 @@ _.chain(_.range(900, 999)).each(function(num) {
   })
 })
 
-console.log(largest_product);
 console.log(largest_product == 906609);
