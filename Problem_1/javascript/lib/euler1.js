@@ -12,4 +12,4 @@ var answer = sum(_.compact(_.map(_.range(1000), function(num) {
   }
 })));
 
-console.log(answer);
+console.log(answer == 233168);
