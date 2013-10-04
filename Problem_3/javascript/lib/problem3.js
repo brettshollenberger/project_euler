@@ -16,7 +16,6 @@ var answer = 0;
 _.each(_.range(8000), function(num) {
   if (isFactor(num, 600851475143) && isPrime(num)) {
     answer = num;
-    return;
   };
 });
 
