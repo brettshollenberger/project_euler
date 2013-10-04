@@ -4,24 +4,24 @@ var theNum = "731671765313306249192251196744265747423553491949349698352031277450
 
 var theArray = [];
 
-_.chain(theNum).each(function(num) {
-  if (theNum[4]) {
-    consecutives = num + theNum[1] + theNum[2] + theNum[3] + theNum[4];
-    if (!_.contains(consecutives, '0')) { theArray.push(consecutives) };
-  }
+function getConsecutives(num) {
+  consecutives = num + theNum[1] + theNum[2] + theNum[3] + theNum[4];
   theNum = theNum.slice(1);
-});
+  if (!_.contains(consecutives, '0')) { return consecutives };
+}
 
-var products = [];
+function findProduct(num) {
+  return _.reduce(num, function(start, n) {
+    return start * n;
+  }, 1);
+};
 
-_.each(theArray, function(num) {
-  var product = 1;
-  _.each(num, function(n) {
-    product *= n;
-  });
-  products.push(product);
-});
-
-var answer = Number(_.chain(products).sortBy(function(num) { return num ; }).last().value());
+var answer = _.chain(theNum)
+  .map(function(num) { return getConsecutives(num) })
+  .compact()
+  .map(function(num) { return findProduct(num); })
+  .sortBy(function(num) { return num; })
+  .last()
+  .value();
 
 console.log(answer == 40824);
