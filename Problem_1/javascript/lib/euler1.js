@@ -6,10 +6,8 @@ var sum = function(array) {
   }, 0);
 };
 
-var answer = sum(_.compact(_.map(_.range(1000), function(num) {
-  if (num % 3 === 0 || num % 5 === 0) {
-    return num;
-  }
-})));
+var answer = sum(_.chain(_.range(1000)).map(function(num) {
+  if (num % 3 === 0 || num % 5 === 0) { return num; }
+}).compact().value());
 
 console.log(answer == 233168);
