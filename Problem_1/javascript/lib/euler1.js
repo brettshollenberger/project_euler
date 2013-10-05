@@ -10,4 +10,4 @@ var answer = sum(_.chain(_.range(1000)).map(function(num) {
   if (num % 3 === 0 || num % 5 === 0) { return num; }
 }).compact().value());
 
-console.log(answer == 233168);
+module.exports.answer = answer;

@@ -17,9 +17,9 @@ function findProduct(num) {
 };
 
 var answer = _.chain(theNum)
-  .map(function(num) { return getConsecutives(num) })
+  .map(function(num)    { return getConsecutives(num) })
   .compact()
-  .map(function(num) { return findProduct(num); })
+  .map(function(num)    { return findProduct(num); })
   .sortBy(function(num) { return num; })
   .last()
   .value();
