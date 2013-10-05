@@ -14,6 +14,9 @@ function fibUpTo(num) {
   return fib;
 }
 
-var answer = sum(_.filter(fibUpTo(4000000), function(num) { return num % 2 === 0}));
-
-console.log(answer == 4613732);
+module.exports.answer = sum(
+                          _.filter(
+                          fibUpTo(4000000),
+                          function(num) {
+                            return num % 2 === 0;
+                          }));
