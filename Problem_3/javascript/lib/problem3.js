@@ -2,15 +2,15 @@ var _ = require('underscore');
 
 function isPrime(num) {
   var returner = true;
-  _.each(_.range(2, num), function(test) { 
-    if (num % test === 0) { returner = false; } 
+  _.each(_.range(2, num), function(test) {
+    if (num % test === 0) { returner = false; }
   });
   return returner;
 }
 
 function isFactor(num, test) {
-  return test % num === 0
-};
+  return test % num === 0;
+}
 
 var answer = 0;
 _.each(_.range(8000), function(num) {
@@ -19,4 +19,4 @@ _.each(_.range(8000), function(num) {
   };
 });
 
-console.log(answer == 6857);
+module.exports.answer = answer;
